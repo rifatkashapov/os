@@ -4,8 +4,12 @@ jl      target ; less than                  ( i.e. x <  y )
 jle     target ; less than or equal         ( i.e. x <= y )
 jg      target ; greater than               ( i.e. x >  y )
 jge     target ; greater than or equal      ( i.e. x >= y )
+jc command ; jump if carry flag (CF) is set 
 
 sp bp - stack
+ip (instruction pointer)
+pusha and popa
+call and ret
 
 
 ///////// General registers
