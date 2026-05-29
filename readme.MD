@@ -6,8 +6,7 @@ ndisasm -b 32 c_asm/pointer.bin
 i386-elf-gcc -ffreestanding -c kernel/kernel.c -o kernel/kernel.o
 i386-elf-ld -o kernel/kernel.bin -Ttext 0x0 --oformat binary kernel/kernel.o
 
-#https://github.com/cfenollosa/os-tutorial/tree/master/14-checkpoint
-https://wiki.osdev.org/Expanded_Main_Page
+
 
 
 To compile system-independent code, we need the flag -ffreestanding, so compile function.c in this fashion:
