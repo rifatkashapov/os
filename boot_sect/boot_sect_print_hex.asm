@@ -11,7 +11,7 @@ print_hex:
 ; Then, move the ASCII byte to the correct position on the resulting string
 hex_loop:
     cmp cx, 4 ; loop 4 times
-    je end
+    je hex_end
     
     ; 1. convert last char of 'dx' to ascii
     mov ax, dx ; we will use 'ax' as our working register
@@ -33,11 +33,11 @@ step2:
     add cx, 1
     jmp hex_loop
 
-end:
+hex_end:
     ; prepare the parameter and call the function
     ; remember that print receives parameters in 'bx'
     mov bx, HEX_OUT
-    call print
+    call print_string
 
     popa
     ret
